@@ -1,5 +1,17 @@
 <?php
-
+/**
+ * FileCombiner Class for PhP
+ *
+ * Combines files and makes them into a single file.
+ * Checks by means of modification date in source
+ * directory whether a file has changed and renews
+ * the target file.
+ *
+ * @version 1.0.0
+ * @author  Pixelbart <me@pixelbart.de>
+ * @link    https://github.com/pixelbart/filecombiner/
+ * @license MIT License (https://opensource.org/licenses/MIT)
+ */
 class FileCombiner
 {
     /**
