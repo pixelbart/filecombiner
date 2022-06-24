@@ -61,3 +61,30 @@ add_action('wp_enqueue_scripts', function() {
     $combiner->enqueue('enqueue_name', ['jquery'], '1.0.0', true);
 });
 ```
+
+## Callback
+
+You can also execute a callback on the result. In this way, for example, a minification can be set up.
+
+```php
+/**
+ * Removes spaces and breaks.
+ * 
+ * @param string $content
+ * @return string
+ */
+function removeUnnecessaryThings($content)
+{
+    return preg_replace('/\s*/m', '', $content);
+}
+
+$source = get_stylesheet_directory() . '/test/source';
+$target = get_stylesheet_directory() . '/test/combined.css';
+
+$combiner = new FileCombiner($source, $target, '.css');
+
+$combiner->watch();
+
+$combiner->setTargetCallback('removeUnnecessaryThings');
+```
+
