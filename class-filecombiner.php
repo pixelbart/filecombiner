@@ -45,9 +45,9 @@ class FileCombiner
     private $_targetCallback;
 
     /**
-     * @param string $source    Der Ordner, in dem alle Dateien sind.
-     * @param string $target    Die Zieldatei, in der alles kombiniert werden soll.
-     * @param string $extension Die Dateiendung die beachtet werden soll.
+     * @param string $source    The folder where all the files are.
+     * @param string $target    The destination file where everything should be combined.
+     * @param string $extension The file extension to be respected.
      */
     public function __construct(string $source, string $target, string $extension = '.js')
     {
@@ -68,10 +68,10 @@ class FileCombiner
     }
 
     /**
-     * Eine Funktion, oder Methode, die zum Schluß auf den Inhalt der Zieldatei angewendet werden soll.
-     * Ist nützlich, falls man die Datei minifizieren möchte.
+     * A function, or method, to be applied to the contents of the target file at the end.
+     * Is useful if you want to minify the file.
      *
-     * @param string $callback Die Funktion/Methode die ausgeführt werden soll.
+     * @param string $callback The function/method to be executed.
      *
      * @return void
      */
@@ -81,8 +81,7 @@ class FileCombiner
     }
 
     /**
-     * Prüft das Quellverzeichnis und löst die Verarbeitung aus,
-     * falls sich eine Datei verändert hat.
+     * Checks the source directory and triggers processing if a file has changed.
      *
      * @return bool
      */
@@ -121,7 +120,7 @@ class FileCombiner
     }
 
     /**
-     * Führt ein Update der Dateien durch.
+     * Performs an update of the files.
      *
      * @return bool
      */
@@ -144,7 +143,7 @@ class FileCombiner
     }
 
     /**
-     * Startet den Vorgang und kombiniert alle Dateien.
+     * Starts the process and combines all files.
      *
      * @return bool
      */
@@ -176,11 +175,11 @@ class FileCombiner
     }
 
     /**
-     * Fügt die Zieldatei der WordPress-Enqueue zu.
+     * Adds the target file to the WordPress enqueue.
      *
-     * @param string $name     Name der Enqueue.
-     * @param array  $supports Name anderer Enqueues, die vorher geladen werden sollen.
-     * @param string $version  Die Version der Datei. Mit '' wird eine uniqid() generiert und die Datei nicht vom Browser gecached.
+     * @param string $name     Enqueue name.
+     * @param array  $supports Name of other enqueues to be loaded before.
+     * @param string $version  The version of the file. With '' a uniqid() is generated and the file is not cached by the browser.
      *
      * @return void
      */
@@ -200,10 +199,10 @@ class FileCombiner
     }
 
     /**
-     * Liest eine Datei oder mehrere Dateien.
+     * Reads one or more files.
      *
-     * @param string|string[] $path Die Dateien die gelesen werden sollen.
-     * @param string          $sep  Gibt an, wie die einzelnen Inhalt voneinander getrennt werden.
+     * @param string|string[] $path The files to be read.
+     * @param string          $sep  Specifies how the individual contents are separated from each other.
      *
      * @return string
      */
@@ -229,10 +228,10 @@ class FileCombiner
     }
 
     /**
-     * Erstellt eine Datei oder mehrere Dateien mit Inhalt.
+     * Creates one or more files with content.
      *
-     * @param string|string[] $path    Die Dateien die erstellt werden sollen.
-     * @param string          $content Der Inhalt der Dateien.
+     * @param string|string[] $path    The files to be created.
+     * @param string          $content The content of the files.
      *
      * @return void
      */
@@ -252,9 +251,9 @@ class FileCombiner
     }
 
     /**
-     * Löscht eine Datei oder mehrere Dateien.
+     * Deletes one or more files.
      *
-     * @param string|string[] $path Die Dateien die gelöscht werden sollen.
+     * @param string|string[] $path The files to be deleted.
      *
      * @return void
      */
@@ -286,10 +285,10 @@ class FileCombiner
     }
 
     /**
-     * Wandelt einen Pfad in eine URL um.
+     * Converts a path into a URL.
      *
-     * @param string $file Der Pfad der Datei.
-     * @param string $protocol Das Protokoll der URL.
+     * @param string $file The path of the file.
+     * @param string $protocol The protocol of the URL.
      *
      * @return string
      */
