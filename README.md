@@ -87,4 +87,6 @@ $combiner->watch();
 
 $combiner->setTargetCallback('removeUnnecessaryThings');
 ```
+## Disclaimer
 
+The class has been more of a side project that I needed for internal purposes. I didn't explicitly consider any security standard here and also didn't include any debug functionality. This all needs to be checked and added by you. The class works as it is and is easily modifiable.
