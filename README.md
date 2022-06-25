@@ -12,8 +12,8 @@ include 'class-filecombiner.php';
 
 // CSS
 
-$source = get_stylesheet_directory() . '/test/source';
-$target = get_stylesheet_directory() . '/test/combined.css';
+$source = '/test/source';
+$target = '/test/combined.css';
 
 $combiner = new FileCombiner($source, $target, '.css');
 
@@ -21,8 +21,8 @@ $combiner->watch();
 
 // JS
     
-$source = get_stylesheet_directory() . '/test/source';
-$target = get_stylesheet_directory() . '/test/combined.js';
+$source = '/test/source';
+$target = '/test/combined.js';
 
 $combiner = new FileCombiner($source, $target, '.js');
 
@@ -78,8 +78,8 @@ function removeUnnecessaryThings($content)
     return preg_replace('/\s*/m', '', $content);
 }
 
-$source = get_stylesheet_directory() . '/test/source';
-$target = get_stylesheet_directory() . '/test/combined.css';
+$source = '/test/source';
+$target = '/test/combined.css';
 
 $combiner = new FileCombiner($source, $target, '.css');
 
